@@ -1,0 +1,98 @@
+2024-06-16 23:33:54,891 WARNING database DDL Query made to DB:
+alter table `tabGrades` add column if not exists parentfield varchar(140)
+2024-06-16 23:33:55,838 WARNING database DDL Query made to DB:
+ALTER TABLE `tabGrades` ADD COLUMN `subject` varchar(140), ADD COLUMN `1st_grading` varchar(140), ADD COLUMN `2nd_grading` varchar(140), ADD COLUMN `3rd_grading` varchar(140), ADD COLUMN `4th_grading` varchar(140), ADD COLUMN `final_rating` varchar(140)
+2024-06-17 00:38:25,225 WARNING database DDL Query made to DB:
+ALTER TABLE `tabGrades` ADD COLUMN `course` varchar(140)
+2024-06-17 00:45:06,877 WARNING database DDL Query made to DB:
+ALTER TABLE `tabGrades` ADD UNIQUE INDEX IF NOT EXISTS student_name (`student_name`)
+2024-06-17 00:56:27,196 WARNING database DDL Query made to DB:
+ALTER TABLE `tabGrades` ADD COLUMN `first_grading` varchar(140), ADD COLUMN `second_grading` varchar(140), ADD COLUMN `third_grading` varchar(140), ADD COLUMN `fourth_grading` varchar(140)
+2024-06-17 01:50:41,145 WARNING database DDL Query made to DB:
+ALTER TABLE `tabGrades` DROP INDEX `student`
+2024-06-17 06:39:51,208 WARNING database DDL Query made to DB:
+ALTER TABLE `tabGrades` ADD COLUMN `tip` text
+2024-06-17 07:30:08,276 WARNING database DDL Query made to DB:
+ALTER TABLE `tabGrades` ADD COLUMN `tips` longtext default 'Hi'
+2024-06-17 09:36:18,282 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAssignment` ADD COLUMN `subject` varchar(140)
+2024-06-17 09:36:18,297 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAssignment` MODIFY `score` decimal(21,9) not null default 0
+2024-06-17 10:02:29,428 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAssignment` ADD COLUMN `course` varchar(140)
+2024-06-17 10:02:29,443 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAssignment` MODIFY `score` decimal(21,9) not null default 0
+2024-06-17 10:19:47,159 WARNING database DDL Query made to DB:
+ALTER TABLE `tabGrades` MODIFY `tips` text default 'Please Ensure There is no Duplication'
+2024-06-17 10:21:56,429 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAttendance` DROP INDEX `student`
+2024-06-17 12:34:50,148 WARNING database DDL Query made to DB:
+create table `tabAttendance Points` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			`_user_tags` text,
+`_comments` text,
+`_assign` text,
+`_liked_by` text,
+index modified(modified))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2024-06-17 12:36:36,716 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAttendance Points` ADD COLUMN `student` varchar(140), ADD COLUMN `attendance_points` decimal(21,9) not null default 0
+2024-06-17 16:16:59,133 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAttendance` MODIFY `date` datetime(6)
+2024-06-18 10:21:31,997 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAttendance Points` MODIFY `attendance_points` decimal(21,9) not null default 0
+2024-06-18 11:51:15,601 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAttendance Points` MODIFY `attendance_points` decimal(21,9) not null default 0, ADD UNIQUE INDEX IF NOT EXISTS student (`student`)
+2024-06-18 13:36:38,751 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAttendance Points` MODIFY `attendance_points` decimal(21,9) not null default 0
+2024-06-19 12:07:37,924 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAssignment` MODIFY `score` decimal(21,9) not null default 0
+2024-06-19 12:16:32,949 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAssignment` ADD COLUMN `student_applicant` varchar(140)
+2024-06-19 12:16:32,961 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAssignment` MODIFY `score` decimal(21,9) not null default 0
+2024-06-19 13:10:57,243 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAssignment` ADD COLUMN `student_email_id` varchar(140)
+2024-06-19 13:10:57,259 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAssignment` MODIFY `score` decimal(21,9) not null default 0
+2024-06-19 13:21:22,233 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAssignment` MODIFY `score` decimal(21,9) not null default 0
+2024-06-19 13:24:14,740 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAssignment` MODIFY `score` decimal(21,9) not null default 0
+2024-06-19 13:25:29,295 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAssignment` MODIFY `score` decimal(21,9) not null default 0
+2024-06-19 13:33:22,808 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAssignment` MODIFY `score` decimal(21,9) not null default 0
+2024-06-19 13:36:15,154 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAssignment` MODIFY `score` decimal(21,9) not null default 0
+2024-06-19 13:36:15,227 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAssignment` DROP INDEX `student`
+2024-06-19 15:51:02,159 WARNING database DDL Query made to DB:
+RENAME TABLE `tabAttendance Points` TO `tabAttendance and Assignment Points`
+2024-06-19 15:53:05,505 WARNING database DDL Query made to DB:
+RENAME TABLE `tabAttendance and Assignment Points` TO `tabAttendance Points`
+2024-06-20 00:05:14,792 WARNING database DDL Query made to DB:
+ALTER TABLE `tabGuardian` ADD COLUMN `custom_student_email` varchar(140)
+2024-06-20 16:11:56,591 WARNING database DDL Query made to DB:
+ALTER TABLE `tabGuardian` ADD UNIQUE INDEX IF NOT EXISTS guardian_name (`guardian_name`)
+2024-06-20 16:13:17,897 WARNING database DDL Query made to DB:
+ALTER TABLE `tabGuardian` DROP INDEX `guardian_name`
+2024-06-20 16:26:28,564 WARNING database DDL Query made to DB:
+ALTER TABLE `tabGuardian` ADD UNIQUE INDEX IF NOT EXISTS guardian_name (`guardian_name`)
+2024-06-21 07:41:40,093 WARNING database DDL Query made to DB:
+ALTER TABLE `tabGuardian` ADD COLUMN `custom_full_name` varchar(140)
+2024-06-21 08:19:57,948 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAttendance` ADD COLUMN `student_email` varchar(140)
+2024-06-21 08:59:44,195 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAssignment` MODIFY `score` decimal(21,9) not null default 0
+2024-06-21 09:00:40,149 WARNING database DDL Query made to DB:
+ALTER TABLE `tabAssignment` MODIFY `score` decimal(21,9) not null default 0
